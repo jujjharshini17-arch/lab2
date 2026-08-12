@@ -1,0 +1,3 @@
+in requirments.txt paste flask
+google-genai
+gunicorn
