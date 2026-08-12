@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: lab2-streamlit
+    env: python
+    plan: free
+    repo: https://github.com/jujjharshini17-arch/lab2.git
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: GEMINI_API_KEY
+        fromSecret: GEMINI_API_KEY
